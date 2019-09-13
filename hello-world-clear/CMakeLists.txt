@@ -1,11 +1,8 @@
-cmake_minimum_required(VERSION 2.8.4)
+cmake_minimum_required(VERSION 3.1)
+project(hello_clear)
 
-project(hello)
+message(STATUS "binary dir: ${PROJECT_BINARY_DIR}")
+message(STATUS "source dir: ${PROJECT_SOURCE_DIR}")
 
 add_subdirectory(src)
 
-INSTALL(FILES COPYRIGHT README.md DESTINATION share/doc/cmake/hello-world-clear)
-
-INSTALL(PROGRAMS runhello.sh DESTINATION bin)
-
-INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake/hello-world-clear)
